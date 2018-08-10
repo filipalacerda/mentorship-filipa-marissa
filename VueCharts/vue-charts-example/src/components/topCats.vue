@@ -21,8 +21,7 @@ export default {
       datacollection: {
         labels: ['x', 'y', 'z'],
         datasets: [{
-          data: [10, 12, 13],
-          xpto: [20, 12, 14, 23],
+          data: [10, 20, 25],
           backgroundColor: ["rgba(255, 94, 94, 1)", "rgba(14, 79, 225, 1)", "rgba(14, 79, 225, 1)", "rgba(14, 79, 225, 1)","rgba(14, 79, 225, 1)"]
         }]
       },
@@ -52,7 +51,8 @@ export default {
               color: "rgba(0, 0, 0, 0)",
             },
             ticks: {
-              display: false
+              display: false,
+              beginAtZero: true
             },
 
           }],
