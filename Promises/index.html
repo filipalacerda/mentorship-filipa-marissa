@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Recreating .ready()</title>
+	<style>
+		body {
+			margin: 0px;
+		}
+		.responsive {
+			width: 10%;
+			height: 10%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Are you doing work when the document is ready?</h1>
+	<h3>Your wrapper should resolve before the huge image finishes loading. Turn on <a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions">network throttling</a> to test.</h3>
+	<div class="completion">Wrapper hasn't resolved yet!</div>
+	<img class="responsive" src="https://instagram.fopo2-1.fna.fbcdn.net/vp/3fd694d5fbf8fe4d62aedbc2600f8cb3/5C089C37/t51.2885-15/e35/36773879_437966113370885_2669358900729348096_n.jpg" alt="ray">
+	<p>photo credit - me. IG @maribies</p>
+	<script>
+		function ready() {
+			/*
+			Your code goes here!
+
+			Instructions:
+			(1) Set network throttling.
+			(2) Wrap an event listener for readystatechange in a Promise.
+			(3) If document.readyState is not 'loading', resolve().
+			(4) Test by chaining wrapperResolved(). If all goes well, you should see "Resolved" on the page!
+
+			Make sure you return the Promise!
+			 */
+			document.addEventListener('readystatechange', function() {
+				/*
+				Your code here too!
+				 */
+			});
+		};
+
+		/*
+		Don't forget to test your code!
+		Call wrapperResolved when the DOM is ready.
+		 */
+		// ready()
+
+		// Just here for your testing
+		function wrapperResolved() {
+			var completion = document.querySelector('.completion');
+			completion.innerHTML = "Resolved!";
+		};
+	</script>
+</body>
+</html>
