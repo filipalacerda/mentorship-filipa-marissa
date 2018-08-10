@@ -21,29 +21,20 @@
 	<p>photo credit - me. IG @maribies</p>
 	<script>
 		function ready() {
-			/*
-			Your code goes here!
+		  let myPromise = new Promise(function(resolve){
+			  document.addEventListener('readystatechange', event => {
+				  if (event.target.readyState !== "loading") {
+					  resolve();
+				}
+			})
+			//this doesn't feel right here
+			myPromise.then(function() {
+ 			 wrapperResolved();
+ 		 })
+	  });
 
-			Instructions:
-			(1) Set network throttling.
-			(2) Wrap an event listener for readystatechange in a Promise.
-			(3) If document.readyState is not 'loading', resolve().
-			(4) Test by chaining wrapperResolved(). If all goes well, you should see "Resolved" on the page!
 
-			Make sure you return the Promise!
-			 */
-			document.addEventListener('readystatechange', function() {
-				/*
-				Your code here too!
-				 */
-			});
-		};
-
-		/*
-		Don't forget to test your code!
-		Call wrapperResolved when the DOM is ready.
-		 */
-		// ready()
+		ready();
 
 		// Just here for your testing
 		function wrapperResolved() {
