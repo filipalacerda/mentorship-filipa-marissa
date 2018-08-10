@@ -21,26 +21,25 @@
 	<p>photo credit - me. IG @maribies</p>
 	<script>
 		function ready() {
-		  let myPromise = new Promise(function(resolve){
+		  return new Promise(function(resolve){
 			  document.addEventListener('readystatechange', event => {
 				  if (event.target.readyState !== "loading") {
 					  resolve();
-				}
-			})
-			//this doesn't feel right here
-			myPromise.then(function() {
- 			 wrapperResolved();
- 		 })
-	  });
+				  }
+			  })
+	    });
+	  };
 
-
-		ready();
+    ready().then(wrapperResolved);
 
 		// Just here for your testing
 		function wrapperResolved() {
 			var completion = document.querySelector('.completion');
 			completion.innerHTML = "Resolved!";
 		};
+
+
+
 	</script>
 </body>
 </html>
