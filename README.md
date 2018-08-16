@@ -4,4 +4,4 @@ Frontend mentorship TNDS Filipa:Marissa
 ## Projects
 
 * [Interview Questions](./InterviewQuestions/README.md)
-* [TodoMVC](./TodoMVC/README.md)
+* [TodoMVC](./TodoMVC/vue/README.md)
